@@ -53,4 +53,12 @@ function moveBox() { // рухаємо квадратик
     }
 }
 
+function speed() { // функція для завдання швидкості
+    time = prompt("Введите скорость"); // встановили новий час
+    console.log(time);
+    box.innerHTML = time; // записали інформацію про новий час на квадратику
+    clearInterval(intervalId); // Очищаємо старий інтервал
+    intervalId = setInterval(moveBox, time); // встановлюємо новий        
+};
+
 intervalId = setInterval(moveBox, time);
